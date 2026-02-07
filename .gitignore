@@ -1,6 +1,7 @@
 # Credenciais sensíveis
 account.json
 .env
+.env.example
 
 # Cache Python
 __pycache__/
