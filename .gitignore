@@ -1,0 +1,18 @@
+# Credenciais sensíveis
+account.json
+.env
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambientes virtuais
+venv/
+env/
+ENV/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
