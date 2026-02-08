@@ -1,21 +1,15 @@
-# Credenciais sensíveis
+# Credenciais
 account.json
-*.env
+.env
 
-# Cache Python
-
+# Python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 
-# Ambientes virtuais
+# Node
+node_modules/
+dist/
 
-venv/
-env/
-ENV/
-
-#Arquivos do sistema
-
-.DS_Store
-Thumbs.db
+# IDE
+.vscode/
+.idea/

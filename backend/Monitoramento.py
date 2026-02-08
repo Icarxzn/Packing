@@ -6,6 +6,8 @@ import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
 import time
+import os
+from pathlib import Path
 
 print("="*70)
 print("INICIANDO DASHBOARD")
@@ -35,7 +37,9 @@ def carregar_dados():
         if tempo_decorrido < CACHE_DURATION:
             return dados_cache["df"]
     
-    creds = Credentials.from_service_account_file("account.json", scopes=SCOPES)
+    # Busca account.json na raiz do projeto (um nível acima)
+    account_path = Path(__file__).parent.parent / "account.json"
+    creds = Credentials.from_service_account_file(str(account_path), scopes=SCOPES)
     gc = gspread.authorize(creds)
     sheet = gc.open_by_key(PLANILHA_ID).worksheet(NOME_ABA)
     
